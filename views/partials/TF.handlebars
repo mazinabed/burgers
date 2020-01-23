@@ -1,0 +1,14 @@
+{{!-- <li>
+    {{#if devoured}}
+    <p>{{id}}</p>
+    <p>{{burger_name}}</p>
+    <p>{{devoured}}</p>
+    {{/if}}
+</li> --}}
+
+<li></li>
+{{!-- {{id}} --}}
+{{burger_name}}
+{{#if devoured}}{{else}}<button data-id = "{{id}}" class = "changestatusbutton float-right">MUNCHED!</button>
+{{/if}}
+</li>

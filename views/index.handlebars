@@ -1,0 +1,42 @@
+<h1>BURGERS/FOOD</h1>
+<br>
+<div class="container centerme">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Add Burger</h2>
+      <form class="addburger">
+        <input type="text" id="newburger" name="name">
+        <button type="submit">YUM!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h2>TASTY</h2>
+      <ol>
+        {{#each burgers}}
+        {{#unless devoured}}
+        {{> TF devoured=false}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+    <div class="col-sm">
+      <h2>Munched</h2>
+      <ol>
+        {{#each burgers}}
+        {{#if devoured}}
+        {{> TF devoured=true}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+
+  </div>
+</div>
